@@ -1,2 +1,5 @@
-/s3-backup/
-/mysqldump.sql.gz
+.terraform/
+.terraform.lock.hcl
+s3-backup/
+mysqldump.sql.gz
+var-www-html/
