@@ -54,8 +54,3 @@ resource "aws_iam_group_policy_attachment" "backup_bucket_policy_attachment" {
   group      = aws_iam_group.akademiguru_readonly_group.name
   policy_arn = aws_iam_policy.backup_bucket_readonly_policy.arn
 }
-
-# Output variables
-output "bucket_name" {
-  value = aws_s3_bucket.akademiguru_bucket.bucket
-}
