@@ -1,7 +1,5 @@
 # Provider and backend configuration
 provider "aws" {
-  region = "ap-southeast-2"
-  profile = "elsa-f-2"
 }
 
 terraform {
