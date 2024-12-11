@@ -6,14 +6,6 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket         = "terraform-state-456595949046"
-    key            = "terraform/akademiguru-backup/terraform.tfstate"
-    profile        = "elsa-f-2"
-    region         = "ap-southeast-2"
-    dynamodb_table = "terraform-state-456595949046"
-    encrypt        = true
-    kms_key_id     = "alias/terraform-state-456595949046"
-    role_arn       = "arn:aws:iam::456595949046:role/terraform-state-456595949046"
   }
 }
 
