@@ -3,11 +3,11 @@
 This repository holds the Terraform script and other utilities for backing
 up Sitti Patahuddin's AkademiGuru AWS account.
 
-A S3 bucket is created in the SplatMaths AWS account where copies of everything
-I thought was work backing up:
+A S3 bucket is created in the `ap-southeast-2` region in SplatMaths AWS account
+where copies of everything I thought was worth backing up:
 
 * Contents of all S3 buckets
-* Compressed contents of /var/www/html where the SERC Academy website is stored
+* Compressed contents of `/var/www/html` where the SERC Academy website is stored
 * Compressed `mysqldump` of the database running on the EC2 instance
 
 The files can be read by any IAM user with an attached `AdministratorAccess` or `PowerUserAccess` policy (or specific permissions). To add IAM users only giving
@@ -46,13 +46,14 @@ use this backend unless the backend configuration changes.
 
 Verify the plan produced by Terraform to deploy the infrastructure:
 ```
-$ AWS_PROFILE=akademiguru AWS_REGION=ap-southeast-2 \
+$ AWS_PROFILE=<your profile> AWS_REGION=ap-southeast-2 \
   terraform plan
+[...]
 ```
 
 If that looks OK, deploy the infrastructure:
 ```
-$ AWS_PROFILE=akademiguru AWS_REGION=ap-southeast-2 \
+$ AWS_PROFILE=<your profile> AWS_REGION=ap-southeast-2 \
   terraform apply
 [...]
 ```
