@@ -3,7 +3,7 @@ default:
 
 # Terraform backend configuration
 TF_SCRIPT_NAME=akademiguru-backup
-TF_BACKEND_ACCOUNT_ID=456595949046
+TF_BACKEND_ACCOUNT_ID=995898474277
 TF_BACKEND_REGION=ap-southeast-2
 
 tf-init:
